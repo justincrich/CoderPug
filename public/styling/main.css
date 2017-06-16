@@ -7,7 +7,11 @@ body {
   display: flex;
   flex-direction: row;
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  font-family: "Roboto", sans-serif; }
+
+a {
+  text-decoration: none; }
 
 .pageBody {
   margin-top: 70px;
@@ -45,7 +49,17 @@ header {
 .menu {
   list-style-type: none;
   display: none;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%; }
+
+.menu > a {
+  color: #FFF;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.menu > a:hover {
+  background: #F57C00; }
 
 .hamburger-menu {
   position: absolute;

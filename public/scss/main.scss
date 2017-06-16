@@ -51,6 +51,10 @@ body{
   flex-direction: row;
   margin:0px;
   padding:0px;
+  font-family: $font;
+}
+a{
+  text-decoration: none;
 }
 
 .pageBody{
@@ -95,6 +99,18 @@ header{
   list-style-type: none;
   display: none;
   flex-direction: column;
+  height: 100%;
+}
+
+.menu > a{
+  color: $primary-text-color-dark;
+  height: 100%;
+  display:flex;
+  align-items: center;
+}
+
+.menu > a:hover {
+  background:$primary-color-dark;
 }
 
 //Hamburger Menu
