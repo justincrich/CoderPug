@@ -1,0 +1,16 @@
+{
+  "name": "coderpug",
+  "version": "1.0.0",
+  "description": "A site that contains all information about coding projects by coder pug.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Rich",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
+    "sass": "^1.0.0-beta.1"
+  }
+}
