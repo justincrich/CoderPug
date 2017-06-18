@@ -1,0 +1,76 @@
+@import 'colors';
+@import 'mixins';
+@import "fonts";
+
+/*----------GENERAL FORMATTING------------*/
+.aboutMeCard{
+  @include card(2);
+  height: 300px;
+  width: 90%;
+  //margin: auto 10px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/*----------IMAGE, NAME, & TITLE----------*/
+
+
+.aboutMeOverview{
+  display:flex;
+  height: 100%;
+  flex-direction:column;
+  border-right: 2px dashed #EEEEEE;
+  width:50%;
+
+  .imgContainer{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    .imgCover{
+      margin: auto 0 5px 0;
+      @include picture(125px, 5px);
+    }
+  }
+  .nameTitleContainer{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1{
+      font-size: 24px;
+      margin: 0 0 5px 0;
+      color:$accent-color;
+    }
+    h2{
+      font-size: 16px;
+      margin: 0 0 5px 0;
+      color:$secondary-text-color;
+    }
+  }
+}
+
+/*--------------DETAILS----------------*/
+.aboutMeDetails{
+  width:50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+
+  }
+}
+.aboutMeDescription{
+  height: 75%;
+}
+i{
+  color:$accent-color;
+}

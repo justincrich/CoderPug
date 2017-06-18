@@ -1,0 +1,11 @@
+/*--------------COLORS-------------------*/
+//$primary-color-dark:   #383838;
+$primary-color:        #424242;
+$primary-color-dark:   darken($primary-color,5%);
+$primary-color-light:  lighten($primary-color,5%);
+$primary-color-text:   #212121;
+$accent-color:         #AD8969;
+$primary-text-color-dark:  #212121;
+$primary-text-color-light:   #FFF;
+$secondary-text-color: lighten($primary-color-text,25%);
+$divider-color:        #BDBDBD;

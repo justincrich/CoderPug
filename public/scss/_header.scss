@@ -1,0 +1,136 @@
+/*--------------DEPENDENCIES-------------------*/
+@import 'colors';
+@import 'mixins';
+@import "fonts";
+@import 'sizes';
+/*--------------Header-------------------*/
+
+header{
+  height: 60px;
+  width: 100%;
+  padding:0 0;
+  background: $primary-color;
+  justify-content: flex-start;
+  display: block;
+  flex-direction: column;
+  @include card(1);
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  border-bottom:1px solid $divider-color;
+  transition: height 0.2s ease;
+  @include mq('tablet'){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.brandName{
+  color:$primary-text-color-light;
+  font-family: $font;
+  font-size: $appbar-size;
+  height: 60px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu{
+  flex-direction: column;
+  padding-left:0;
+  display: none;
+  @include mq('tablet'){
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      margin-left:auto;
+    }
+
+  a{
+    color: $primary-text-color-light;
+    display:flex;
+    align-items: center;
+    padding:20px 16px;
+    @media screen
+      and (min-width: map-get($breakpoints,'tablet')){
+        padding: 0 16px 0 16px;
+        display: flex;
+      }
+    &:hover{
+      background:$primary-color-light;
+    }
+  }
+}
+
+
+
+
+//Hamburger Menu
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-spacing: 10px;
+$hamburger-area: $bar-height+$bar-spacing*2;
+
+.hamburger-menu {
+	position: absolute;
+  right:$bar-width - 14px;
+  top:30-($hamburger-area/2);
+  bottom:0;
+  width: $bar-width;
+	height: $bar-height + $bar-spacing*2;
+	cursor: pointer;
+  @include mq('tablet'){
+        display: none;
+  }
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  width: $bar-width;
+	height: $bar-height;
+}
+
+.bar {
+	position: relative;
+	transform: translateY($bar-spacing);
+	background: rgba(255, 255, 255, 1);
+	transition: all 0ms 300ms;
+
+  &.animate {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.bar:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: $bar-spacing;
+	background: rgba(255, 255, 255, 1);
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: $bar-spacing;
+	background: rgba(255, 255, 255, 1);
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.bar.animate:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
