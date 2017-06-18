@@ -447,19 +447,15 @@ header {
   padding: 0 0;
   background: #424242;
   justify-content: flex-start;
-  display: block;
-  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   position: fixed;
   top: 0;
   border-bottom: 1px solid #BDBDBD;
   transition: height 0.2s ease; }
-  @media (min-width: 768px) {
-    header {
-      display: flex;
-      flex-direction: row;
-      align-items: center; } }
 
 .brandName {
   color: #FFF;
@@ -472,16 +468,10 @@ header {
   align-items: center; }
 
 .menu {
-  flex-direction: column;
-  padding-left: 0;
-  display: none; }
-  @media (min-width: 768px) {
-    .menu {
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      height: 100%;
-      margin-left: auto; } }
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-left: auto; }
   .menu a {
     color: #FFF;
     display: flex;
@@ -495,6 +485,7 @@ header {
       background: #4f4f4f; }
 
 .hamburger-menu {
+  display: none;
   position: absolute;
   right: 16px;
   top: 18px;
@@ -502,9 +493,6 @@ header {
   width: 30px;
   height: 24px;
   cursor: pointer; }
-  @media (min-width: 768px) {
-    .hamburger-menu {
-      display: none; } }
 
 .bar,
 .bar:after,
@@ -598,14 +586,15 @@ p {
 .aboutMeCard {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
   height: 320px;
-  width: 90%;
+  width: 70%;
   max-width: 400px;
   border-radius: 3px;
   display: flex;
   flex-direction: row; }
   @media (min-width: 768px) {
     .aboutMeCard {
-      max-width: 1000px; } }
+      max-width: 1000px;
+      height: 250px; } }
 
 /*----------IMAGE, NAME, & TITLE----------*/
 .aboutMeOverview {
@@ -614,6 +603,9 @@ p {
   flex-direction: column;
   border-right: 2px solid #EEEEEE;
   width: 50%; }
+  @media (min-width: 768px) {
+    .aboutMeOverview {
+      width: 40%; } }
   .aboutMeOverview .imgContainer {
     height: 60%;
     width: 100%;
@@ -659,12 +651,18 @@ p {
   display: flex;
   flex-direction: column;
   margin: 15px 15px; }
+  @media (min-width: 768px) {
+    .aboutMeDetails {
+      width: 60%; } }
   .aboutMeDetails .aboutMeDescription {
     height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px; }
+    margin-bottom: 5px; }
+    @media (min-width: 768px) {
+      .aboutMeDetails .aboutMeDescription {
+        height: 40%; } }
     .aboutMeDetails .aboutMeDescription h4 {
       margin: 0px 5px; }
   .aboutMeDetails .skillsBody {
@@ -690,9 +688,15 @@ p {
         border-radius: 16px;
         background-color: #e4e4e4;
         margin: 2px 2px; }
+        .aboutMeDetails .skillsBody .skillsContainer .skill.lvl2 {
+          display: none; }
+          @media (min-width: 768px) {
+            .aboutMeDetails .skillsBody .skillsContainer .skill.lvl2 {
+              display: inline-block; } }
   .aboutMeDetails a {
     margin-top: 5px;
     margin-left: auto;
+    margin-right: 5px;
     font-size: 12px;
     color: #AD8969; }
     .aboutMeDetails a:hover {

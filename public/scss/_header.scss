@@ -11,19 +11,16 @@ header{
   padding:0 0;
   background: $primary-color;
   justify-content: flex-start;
-  display: block;
-  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   @include card(1);
   overflow: hidden;
   position: fixed;
   top:0;
   border-bottom:1px solid $divider-color;
   transition: height 0.2s ease;
-  @include mq('tablet'){
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+
 }
 
 .brandName{
@@ -38,16 +35,20 @@ header{
 }
 
 .menu{
-  flex-direction: column;
-  padding-left:0;
-  display: none;
-  @include mq('tablet'){
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      height: 100%;
-      margin-left:auto;
-    }
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-left:auto;
+  // flex-direction: column;
+  // padding-left:0;
+  // display: none;
+  // @include mq('tablet'){
+  //     list-style-type: none;
+  //     display: flex;
+  //     flex-direction: row;
+  //     height: 100%;
+  //     margin-left:auto;
+  //   }
 
   a{
     color: $primary-text-color-light;
@@ -75,6 +76,7 @@ $bar-spacing: 10px;
 $hamburger-area: $bar-height+$bar-spacing*2;
 
 .hamburger-menu {
+  display: none;
 	position: absolute;
   right:$bar-width - 14px;
   top:30-($hamburger-area/2);
@@ -82,9 +84,9 @@ $hamburger-area: $bar-height+$bar-spacing*2;
   width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
 	cursor: pointer;
-  @include mq('tablet'){
-        display: none;
-  }
+  // @include mq('tablet'){
+  //       display: none;
+  // }
 }
 
 .bar,
