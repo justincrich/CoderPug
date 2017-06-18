@@ -1,3 +1,25 @@
 /*--------------FONTS-------------------*/
 $font: 'Roboto', sans-serif;
 $appbar-size:20px;
+$h0: 32px;
+$h1: 24px;
+$h2: 16px;
+$h3: 14px;
+$h3: 12px;
+$p: 14px;
+
+h1{
+  font-size: $h1;
+}
+
+h2{
+  font-size: $h2;
+}
+
+h3,h4{
+  font-size: $h3;
+}
+
+p {
+  font-size: $p;
+}

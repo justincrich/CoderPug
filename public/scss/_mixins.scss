@@ -57,5 +57,22 @@
     @media (min-width: $value){
       @content;
     }
+    }@else if $break == 'desktop'{
+      @media (min-width: $value){
+        @content;
+      }
   }
+}
+
+@mixin chip(){
+  display: inline-block;
+  height: 29px;
+  color:white;
+  font-size: 10px;
+  font-weight: 500;
+  color:rgba(0,0,0,0.6);
+  line-height: 29px;
+  padding:0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
 }

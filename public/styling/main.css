@@ -41,9 +41,12 @@ section {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
+h1, h2, h3, h4 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0; }
+
+p {
+  margin: 0; }
 
 /* Grouping content
    ========================================================================== */
@@ -413,11 +416,29 @@ ul, ol {
 
 /*--------------DEPENDENCIES-------------------*/
 /*--------------COLORS-------------------*/
+p {
+  color: #212121; }
+
+h4 {
+  color: #a1a1a1; }
+
 /*--------------Dependencies----------------*/
 /*-------------MEDIA QUERY SIZES------------*/
 /*--------------Functions-------------------*/
 /*--------------Mixins-------------------*/
 /*--------------FONTS-------------------*/
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 16px; }
+
+h3, h4 {
+  font-size: 12px; }
+
+p {
+  font-size: 14px; }
+
 /*-------------MEDIA QUERY SIZES------------*/
 /*--------------Header-------------------*/
 header {
@@ -526,32 +547,72 @@ header {
   transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
 
 /*--------------COLORS-------------------*/
+p {
+  color: #212121; }
+
+h4 {
+  color: #a1a1a1; }
+
 /*--------------Dependencies----------------*/
 /*-------------MEDIA QUERY SIZES------------*/
 /*--------------Functions-------------------*/
 /*--------------Mixins-------------------*/
 /*--------------FONTS-------------------*/
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 16px; }
+
+h3, h4 {
+  font-size: 12px; }
+
+p {
+  font-size: 14px; }
+
 /*--------------COLORS-------------------*/
+p {
+  color: #212121; }
+
+h4 {
+  color: #a1a1a1; }
+
 /*--------------Dependencies----------------*/
 /*-------------MEDIA QUERY SIZES------------*/
 /*--------------Functions-------------------*/
 /*--------------Mixins-------------------*/
 /*--------------FONTS-------------------*/
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 16px; }
+
+h3, h4 {
+  font-size: 12px; }
+
+p {
+  font-size: 14px; }
+
 /*----------GENERAL FORMATTING------------*/
 .aboutMeCard {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
-  height: 300px;
+  height: 320px;
   width: 90%;
+  max-width: 400px;
   border-radius: 3px;
   display: flex;
   flex-direction: row; }
+  @media (min-width: 768px) {
+    .aboutMeCard {
+      max-width: 1000px; } }
 
 /*----------IMAGE, NAME, & TITLE----------*/
 .aboutMeOverview {
   display: flex;
   height: 100%;
   flex-direction: column;
-  border-right: 2px dashed #EEEEEE;
+  border-right: 2px solid #EEEEEE;
   width: 50%; }
   .aboutMeOverview .imgContainer {
     height: 60%;
@@ -575,37 +636,83 @@ header {
     align-items: center;
     flex-direction: column; }
     .aboutMeOverview .nameTitleContainer h1 {
-      font-size: 24px;
       margin: 0 0 5px 0;
       color: #AD8969; }
     .aboutMeOverview .nameTitleContainer h2 {
-      font-size: 16px;
       margin: 0 0 5px 0;
-      color: #616161; }
+      color: #a1a1a1; }
+  .aboutMeOverview ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: 15px; }
+    .aboutMeOverview ul i {
+      color: #AD8969; }
+      .aboutMeOverview ul i:hover {
+        color: #614a35; }
 
 /*--------------DETAILS----------------*/
 .aboutMeDetails {
   width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: column; }
-  .aboutMeDetails ul {
+  flex-direction: column;
+  margin: 15px 15px; }
+  .aboutMeDetails .aboutMeDescription {
+    height: 40%;
+    width: 100%;
     display: flex;
-    flex-direction: row; }
-
-.aboutMeDescription {
-  height: 75%; }
-
-i {
-  color: #AD8969; }
+    flex-direction: column;
+    margin-bottom: 15px; }
+    .aboutMeDetails .aboutMeDescription h4 {
+      margin: 0px 5px; }
+  .aboutMeDetails .skillsBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .aboutMeDetails .skillsBody h4 {
+      margin-bottom: 5px; }
+    .aboutMeDetails .skillsBody .skillsContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .aboutMeDetails .skillsBody .skillsContainer .skill {
+        display: inline-block;
+        height: 29px;
+        color: white;
+        font-size: 10px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 29px;
+        padding: 0 12px;
+        border-radius: 16px;
+        background-color: #e4e4e4;
+        margin: 2px 2px; }
+  .aboutMeDetails a {
+    margin-top: 5px;
+    margin-left: auto;
+    font-size: 12px;
+    color: #AD8969; }
+    .aboutMeDetails a:hover {
+      color: #614a35; }
+    .aboutMeDetails a:active {
+      color: #614a35; }
 
 /*--------------Body-------------------*/
+html {
+  height: 100%;
+  width: 100%; }
+
 body {
   display: flex;
   flex-direction: row;
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%; }
 
 a {
   text-decoration: none; }
@@ -614,10 +721,11 @@ li {
   list-style-type: none; }
 
 .pageBody {
-  margin-top: 70px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 /*# sourceMappingURL=main.css.map */

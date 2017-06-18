@@ -8,12 +8,19 @@
 
 
 /*--------------Body-------------------*/
+html{
+  height: 100%;
+  width: 100%;
+}
+
 body{
   display:flex;
   flex-direction: row;
   margin:0px;
   padding:0px;
   font-family: $font;
+  height: 100%;
+  width: 100%;
 }
 a{
   text-decoration: none;
@@ -23,9 +30,10 @@ li{
 }
 
 .pageBody{
-  margin-top:70px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
