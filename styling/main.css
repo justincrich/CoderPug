@@ -840,6 +840,7 @@ li {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 5px;
     margin-bottom: 10px; }
     @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
       .page .body .group {
