@@ -14,7 +14,7 @@ header{
   align-items: center;
   display: flex;
   flex-direction: row;
-  @include card(1);
+  @include shadow(1);
   overflow: hidden;
   position: fixed;
   top:0;

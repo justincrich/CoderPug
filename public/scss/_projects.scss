@@ -1,0 +1,25 @@
+@import 'colors';
+@import 'mixins';
+@import "fonts";
+
+.projectCard{
+  @include card(
+      $height: 100px,
+      $width:325px,
+      $lgMaxWidth:325px,
+      $lgHeight:100px,
+      $smWidth:200px);
+      display:flex;
+      flex-direction: column;
+      padding: 15px 15px;
+      margin: 10px 0;
+      a{
+        color:$accent-color;
+        &:hover, &:active{
+          color:$accent-color-dark;
+        }
+      }
+      p{
+        margin-top: 10px;
+      }
+}

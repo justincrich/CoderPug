@@ -587,8 +587,9 @@ p {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
   height: 320px;
   width: 70%;
-  max-width: 400px;
-  border-radius: 3px;
+  max-width: 1000px;
+  min-width: 350px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row; }
   @media (min-width: 768px) {
@@ -650,21 +651,17 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 15px 15px; }
+  padding: 15px 15px; }
   @media (min-width: 768px) {
     .aboutMeDetails {
       width: 60%; } }
   .aboutMeDetails .aboutMeDescription {
-    height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px; }
-    @media (min-width: 768px) {
-      .aboutMeDetails .aboutMeDescription {
-        height: 40%; } }
+    padding-bottom: 15px; }
     .aboutMeDetails .aboutMeDescription h4 {
-      margin: 0px 5px; }
+      margin: 0px 10px; }
   .aboutMeDetails .skillsBody {
     width: 100%;
     display: flex;
@@ -704,19 +701,119 @@ p {
     .aboutMeDetails a:active {
       color: #614a35; }
 
-/*--------------Body-------------------*/
-html {
-  height: 100%;
-  width: 100%; }
+/*--------------COLORS-------------------*/
+p {
+  color: #212121; }
 
-body {
+h4 {
+  color: #a1a1a1; }
+
+/*--------------Dependencies----------------*/
+/*-------------MEDIA QUERY SIZES------------*/
+/*--------------Functions-------------------*/
+/*--------------Mixins-------------------*/
+/*--------------FONTS-------------------*/
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 16px; }
+
+h3, h4 {
+  font-size: 12px; }
+
+p {
+  font-size: 14px; }
+
+.experienceCard {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  height: 50px;
+  width: 325px;
+  max-width: 325px;
+  min-width: 200px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0; }
+  @media (min-width: 768px) {
+    .experienceCard {
+      max-width: 325px;
+      height: 50px; } }
+  .experienceCard .image {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 0px;
+    border: 0px solid #F0F0F0; }
+    .experienceCard .image img {
+      width: 100%;
+      height: 100%; }
+  .experienceCard .contents {
+    margin-left: 10px; }
+    .experienceCard .contents h4 {
+      position: absolute; }
+
+/*--------------COLORS-------------------*/
+p {
+  color: #212121; }
+
+h4 {
+  color: #a1a1a1; }
+
+/*--------------Dependencies----------------*/
+/*-------------MEDIA QUERY SIZES------------*/
+/*--------------Functions-------------------*/
+/*--------------Mixins-------------------*/
+/*--------------FONTS-------------------*/
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 16px; }
+
+h3, h4 {
+  font-size: 12px; }
+
+p {
+  font-size: 14px; }
+
+.projectCard {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  height: 100px;
+  width: 325px;
+  max-width: 325px;
+  min-width: 200px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  margin: 10px 0; }
+  @media (min-width: 768px) {
+    .projectCard {
+      max-width: 325px;
+      height: 100px; } }
+  .projectCard a {
+    color: #AD8969; }
+    .projectCard a:hover, .projectCard a:active {
+      color: #614a35; }
+  .projectCard p {
+    margin-top: 10px; }
+
+/*--------------Body-------------------*/
+body {
+  display: flex;
+  flex-direction: column;
   margin: 0px;
   padding: 0px;
   font-family: "Roboto", sans-serif;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: scroll; }
 
 a {
   text-decoration: none; }
@@ -724,12 +821,26 @@ a {
 li {
   list-style-type: none; }
 
-.pageBody {
-  height: 100%;
+.page {
+  height: 100vh;
   width: 100%;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  .page .body .group {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px; }
+    @media (min-width: 768px) {
+      .page .body .group {
+        width: 780px;
+        flex-direction: row;
+        justify-content: space-between; } }
 
 /*# sourceMappingURL=main.css.map */

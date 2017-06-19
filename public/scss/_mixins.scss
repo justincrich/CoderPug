@@ -19,8 +19,7 @@
 
 /*--------------Mixins-------------------*/
 
-//Card - to add shadows to new card divs
-@mixin card($depth:2) {
+@mixin shadow($depth:2){
   @if $depth < 1 {
     box-shadow: none;
   } @else if $depth > 5 {
@@ -30,15 +29,39 @@
   }
 }
 
+//Card - to add shadows to new card divs
+@mixin card(
+$height:320px,
+$width:70%,
+$lgMaxWidth:1000px,
+$lgHeight:250px,
+$smWidth:350px) {
+  @include shadow();
+  height: $height;
+  width: $width;
+  max-width: $lgMaxWidth;
+  min-width: $smWidth;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  @include mq('tablet'){
+    max-width: $lgMaxWidth;
+    height: $lgHeight;
+  };
+}
+
+
+
 //Picture - formats pictures as round
 @mixin picture(
   $size,
-  $brSize:0
+  $brSize:0,
+  $radius:100%
   ){
     height: $size;
     width: $size;
     overflow:hidden;
-    border-radius: 100%;
+    border-radius: $radius;
     border: $brSize solid #F0F0F0;
     img{
       width:100%;

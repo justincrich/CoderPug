@@ -1,0 +1,34 @@
+@import 'colors';
+@import 'mixins';
+@import "fonts";
+
+
+
+    .experienceCard{
+
+      @include card(
+      $height: 50px,
+      $width:325px,
+      $lgMaxWidth:325px,
+      $lgHeight:50px,
+      $smWidth:200px);
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px 0;
+      .image{
+        @include picture($size:50px,$brSize:0px, $radius:0px);
+      }
+      @include mq('tablet'){
+        //margin: 10px 20px;
+      };
+      .contents{
+        margin-left: 10px;
+        h4{
+          position: absolute;
+        }
+      }
+
+
+
+    }
