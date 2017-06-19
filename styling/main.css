@@ -592,7 +592,7 @@ p {
   border-radius: 5px;
   display: flex;
   flex-direction: row; }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .aboutMeCard {
       max-width: 1000px;
       height: 250px; } }
@@ -604,7 +604,7 @@ p {
   flex-direction: column;
   border-right: 2px solid #EEEEEE;
   width: 50%; }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .aboutMeOverview {
       width: 40%; } }
   .aboutMeOverview .imgContainer {
@@ -652,7 +652,7 @@ p {
   display: flex;
   flex-direction: column;
   padding: 15px 15px; }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .aboutMeDetails {
       width: 60%; } }
   .aboutMeDetails .aboutMeDescription {
@@ -687,7 +687,7 @@ p {
         margin: 2px 2px; }
         .aboutMeDetails .skillsBody .skillsContainer .skill.lvl2 {
           display: none; }
-          @media (min-width: 768px) {
+          @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
             .aboutMeDetails .skillsBody .skillsContainer .skill.lvl2 {
               display: inline-block; } }
   .aboutMeDetails a {
@@ -738,7 +738,7 @@ p {
   flex-direction: row;
   align-items: center;
   margin: 10px 0; }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .experienceCard {
       max-width: 325px;
       height: 50px; } }
@@ -793,7 +793,7 @@ p {
   flex-direction: column;
   padding: 15px 15px;
   margin: 10px 0; }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .projectCard {
       max-width: 325px;
       height: 100px; } }
@@ -821,8 +821,11 @@ a {
 li {
   list-style-type: none; }
 
+#home {
+  margin-top: 60px; }
+
 .page {
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   margin: 0 10px;
   display: flex;
@@ -837,7 +840,7 @@ li {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px; }
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
       .page .body .group {
         width: 780px;
         flex-direction: row;
