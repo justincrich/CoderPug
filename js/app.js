@@ -25,18 +25,7 @@ $(document).ready(()=>{
     }
   });
 
-/*
-
-<div class="projectCard">
-  <a href="#">
-    <h2>Project Name</h2>
-  </a>
-  <p>
-    Project description .......
-  </p>
-</div>
-
-*/
+  $("header").scrollspy({offset:-70});
 
   var isActive = false;
 
