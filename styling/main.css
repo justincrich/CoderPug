@@ -585,7 +585,7 @@ p {
 /*----------GENERAL FORMATTING------------*/
 .aboutMeCard {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
-  height: 320px;
+  height: 380px;
   width: 70%;
   max-width: 1000px;
   min-width: 350px;
@@ -595,7 +595,7 @@ p {
   @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .aboutMeCard {
       max-width: 1000px;
-      height: 250px; } }
+      height: 300px; } }
 
 /*----------IMAGE, NAME, & TITLE----------*/
 .aboutMeOverview {
@@ -811,7 +811,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto", sans-serif;
-  height: 100%;
   width: 100%;
   overflow: scroll; }
 
@@ -822,18 +821,20 @@ li {
   list-style-type: none; }
 
 #home {
-  margin-top: 60px; }
+  margin-top: 25vh; }
+
+#experience {
+  margin-bottom: 100px; }
 
 .page {
-  height: 70vh;
+  margin-top: 100px;
   width: 100%;
-  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
   .page .body .group {
-    width: 320px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

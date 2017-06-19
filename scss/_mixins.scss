@@ -31,10 +31,10 @@
 
 //Card - to add shadows to new card divs
 @mixin card(
-$height:320px,
+$height:380px,
 $width:70%,
 $lgMaxWidth:1000px,
-$lgHeight:250px,
+$lgHeight:300px,
 $smWidth:350px) {
   @include shadow();
   height: $height;
