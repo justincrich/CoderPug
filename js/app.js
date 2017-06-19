@@ -25,7 +25,7 @@ $(document).ready(()=>{
     }
   });
 
-  $("header").scrollspy({offset:-70});
+  $("header").scrollspy({offset:-80});
 
   var isActive = false;
 
