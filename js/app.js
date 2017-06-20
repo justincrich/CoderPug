@@ -1,5 +1,9 @@
 $(document).ready(()=>{
 
+  $('.experienceCard').on('click',(e)=>{
+    console.log("CLICK");
+  });
+
   var projects = [];
 
   // Fetch all github projects

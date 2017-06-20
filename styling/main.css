@@ -737,7 +737,8 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px 0; }
+  margin: 10px 0;
+  cursor: pointer; }
   @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     .experienceCard {
       max-width: 325px;

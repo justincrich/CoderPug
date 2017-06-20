@@ -16,6 +16,7 @@
       flex-direction: row;
       align-items: center;
       margin: 10px 0;
+      cursor: pointer;
       .image{
         @include picture($size:50px,$brSize:0px, $radius:0px);
       }
@@ -25,6 +26,7 @@
       .contents{
         margin-left: 10px;
         margin-bottom: 10px;
+
         h4{
           position: absolute;
 
