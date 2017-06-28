@@ -19,7 +19,7 @@
 
 /*--------------Mixins-------------------*/
 
-@mixin shadow($depth:2){
+@mixin shadow($depth:1){
   @if $depth < 1 {
     box-shadow: none;
   } @else if $depth > 5 {
@@ -31,11 +31,11 @@
 
 //Card - to add shadows to new card divs
 @mixin card(
-$height:380px,
-$width:70%,
-$lgMaxWidth:1000px,
-$lgHeight:300px,
-$smWidth:350px) {
+$height,
+$width,
+$lgMaxWidth,
+$lgHeight,
+$smWidth) {
   @include shadow();
   height: $height;
   width: $width;
@@ -49,9 +49,6 @@ $smWidth:350px) {
     height: $lgHeight;
   };
 }
-
-
-
 //Picture - formats pictures as round
 @mixin picture(
   $size,

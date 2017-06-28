@@ -11,15 +11,26 @@
 
 /*--------------Body-------------------*/
 
+html{
+  position:relative;
+  display: flex;
+  justify-content: center;
+
+  height: auto;
+  overflow-y: scroll;
+
+
+}
+
 body{
   display:flex;
   flex-direction: column;
-  margin:0px;
-  padding:0px;
+
+  // padding:0px;
   font-family: $font;
 
-  width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -29,7 +40,7 @@ li{
 }
 
 #home{
-  margin-top:25vh;
+margin-top:100px;
 }
 
 #experience{
@@ -38,7 +49,7 @@ li{
 
 .page{
   margin-top:100px;
-  width: 100%;
+  // width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,13 +57,13 @@ li{
   .body{
 
     .group{
-      width: 100%;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      padding: 0 5px;
+
       margin-bottom: 10px;
       @include mq('tablet'){
         width:780px;

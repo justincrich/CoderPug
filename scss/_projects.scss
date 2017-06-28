@@ -4,15 +4,15 @@
 
 .projectCard{
   @include card(
-      $height: 100px,
-      $width:325px,
-      $lgMaxWidth:325px,
+      $height: 115px,
+      $width:300px,
+      $lgMaxWidth:300px,
       $lgHeight:100px,
       $smWidth:200px);
       display:flex;
       flex-direction: column;
       padding: 15px 15px;
-      margin: 10px 0;
+      margin: 15px 0;
       a{
         color:$accent-color;
         &:hover, &:active{

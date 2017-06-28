@@ -15,7 +15,7 @@
       display:flex;
       flex-direction: row;
       align-items: center;
-      margin: 10px 0;
+      margin: 15px 0;
       cursor: pointer;
       .image{
         @include picture($size:50px,$brSize:0px, $radius:0px);

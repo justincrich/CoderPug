@@ -4,7 +4,11 @@
 
 /*----------GENERAL FORMATTING------------*/
 .aboutMeCard{
-  @include card();
+  @include card(550px,70%,1100px,320px,320px);
+  flex-direction: column;
+  @include mq('tablet'){
+    flex-direction:row;
+  }
 
 }
 
@@ -13,51 +17,60 @@
 
 
 .aboutMeOverview{
-  display:flex;
-  height: 100%;
-  flex-direction:column;
-  border-right: 2px solid #EEEEEE;
-  width:50%;
-  @include mq('tablet'){
-    width:40%;
-  }
-
-  .imgContainer{
-    height: 60%;
+    display:flex;
     width: 100%;
-    display: flex;
+    flex-direction:column;
+    align-content: center;
     justify-content: center;
-
-
-    .imgCover{
-      margin: auto 0 5px 0;
-      @include picture(125px, 5px);
+    border-bottom: 2px solid #EEEEEE;
+    height:50%;
+    @include mq('tablet'){
+      width:40%;
+      height:100%;
+      border-bottom: 0;
+      border-right:2px solid #EEEEEE;
     }
+
+    .meContainer{
+      margin: auto 0;
+      .imgContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+
+        .imgCover{
+          margin: auto 0 5px 0;
+          @include picture(125px, 5px);
+        }
+      }
+      .nameTitleContainer{
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1{
+          margin: 0 0 5px 0;
+          color:$accent-color;
+        }
+        h2{
+          margin: 0 0 5px 0;
+          color:$secondary-text-color;
+        }
+    }
+
   }
-  .nameTitleContainer{
-    height: 20%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    h1{
-      margin: 0 0 5px 0;
-      color:$accent-color;
-    }
-    h2{
-      margin: 0 0 5px 0;
-      color:$secondary-text-color;
-    }
-  }
 
-  ul{
-    display: flex;
+  .contactContainer{
+    display: none;
     flex-direction: row;
     justify-content: space-around;
 
-    margin-top: auto;
-    margin-bottom: 15px;
-    //max-width: 300px;
+    margin-bottom: 25px;
+    @include mq('tablet'){
+      display:flex;
+    }
     i{
       color:$accent-color;
       &:hover{
@@ -71,13 +84,15 @@
 
 /*--------------DETAILS----------------*/
 .aboutMeDetails{
-  width:50%;
-  height: 100%;
+  width:auto;
+  height: 50%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 15px 15px;
   @include mq('tablet'){
     width: 60%;
+    height: 100%;
   }
 
   .aboutMeDescription{
@@ -86,6 +101,7 @@
     flex-direction: column;
     padding-bottom: 15px;
     h4{
+
       margin: 0px 10px;
     }
 
@@ -94,6 +110,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
     h4{
       margin-bottom: 5px;
     }
@@ -117,9 +134,8 @@
     }
   }
   a{
-    margin-top:5px;
-    margin-left:auto;
-    margin-right:5px;
+
+
     font-size:12px;
     color:$accent-color;
     &:hover{
@@ -127,6 +143,31 @@
     }
     &:active{
       color:$accent-color-dark;
+    }
+  }
+  .contactDetailSM{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-top:auto;
+    margin-bottom: 10px;
+
+    @include mq('tablet'){
+      display:none;
+    }
+    .contactContainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-self: flex-end;
+      height: 100%;
+      width: 250px;
+      i{
+        color:$accent-color;
+        &:hover{
+          color:$accent-color-dark;
+        }
+      }
     }
   }
 }
