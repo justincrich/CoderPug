@@ -16,7 +16,7 @@ header{
   flex-direction: row;
   @include shadow(1);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   border-bottom:1px solid $divider-color;
