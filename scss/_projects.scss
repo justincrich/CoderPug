@@ -13,6 +13,8 @@
       flex-direction: column;
       padding: 15px 15px;
       margin: 15px 0;
+
+
       a{
         color:$accent-color;
         &:hover, &:active{
@@ -21,5 +23,10 @@
       }
       p{
         margin-top: 10px;
+        height: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+
       }
 }
