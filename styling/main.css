@@ -873,6 +873,9 @@ li {
 #experience {
   margin-bottom: 100px; }
 
+#projects {
+  padding: 0 10px; }
+
 .page {
   margin-top: 100px;
   display: flex;
