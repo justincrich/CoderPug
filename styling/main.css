@@ -689,6 +689,10 @@ p {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap; }
+      .aboutMeDetails .skillsBody .skillsContainer .lvl1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; }
       .aboutMeDetails .skillsBody .skillsContainer .skill {
         display: inline-block;
         height: 29px;
@@ -707,6 +711,7 @@ p {
             .aboutMeDetails .skillsBody .skillsContainer .skill.lvl2 {
               display: inline-block; } }
   .aboutMeDetails a {
+    margin-left: 5px;
     font-size: 12px;
     color: #AD8969; }
     .aboutMeDetails a:hover {
