@@ -24,6 +24,12 @@
 
           a{
             margin-left: 20px;
+            &:hover{
+              color:$accent-color-dark;
+            }
+            &:active{
+              color:$accent-color-dark;
+            }
           }
         }
       }

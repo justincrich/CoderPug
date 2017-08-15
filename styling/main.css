@@ -840,6 +840,10 @@ p {
       margin-bottom: 5px; }
       .projectCard .projHeader .projLinkContainer a {
         margin-left: 20px; }
+        .projectCard .projHeader .projLinkContainer a:hover {
+          color: #614a35; }
+        .projectCard .projHeader .projLinkContainer a:active {
+          color: #614a35; }
   .projectCard p {
     margin-top: 10px;
     height: 200px;
