@@ -39,6 +39,14 @@ a{
   text-decoration: none;
   color:#AD8969;
 }
+
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+   color: $secondary-text-color;
+}
+
+
 li{
   list-style-type: none;
 }

@@ -15,10 +15,16 @@
       margin: 15px 0;
 
 
-      a{
-        color:$accent-color;
-        &:hover, &:active{
-          color:$accent-color-dark;
+      .projHeader{
+        display: flex;
+        padding-bottom: 10px;
+        .projLinkContainer{
+          display: flex;
+          margin-bottom: 5px;
+
+          a{
+            margin-left: 20px;
+          }
         }
       }
       p{
@@ -29,4 +35,5 @@
 
 
       }
+
 }

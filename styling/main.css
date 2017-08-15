@@ -832,10 +832,14 @@ p {
     .projectCard {
       max-width: 300px;
       height: 100px; } }
-  .projectCard a {
-    color: #AD8969; }
-    .projectCard a:hover, .projectCard a:active {
-      color: #614a35; }
+  .projectCard .projHeader {
+    display: flex;
+    padding-bottom: 10px; }
+    .projectCard .projHeader .projLinkContainer {
+      display: flex;
+      margin-bottom: 5px; }
+      .projectCard .projHeader .projLinkContainer a {
+        margin-left: 20px; }
   .projectCard p {
     margin-top: 10px;
     height: 200px;
@@ -863,6 +867,11 @@ body {
 a {
   text-decoration: none;
   color: #AD8969; }
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #a1a1a1; }
 
 li {
   list-style-type: none; }
